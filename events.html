@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astronomy Ireland Events</title>
+    <!-- Google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google fonts link for Exo san serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/events.css">
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+
+    <!-- meta tag for browser control of page's dimensions and scaling. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Load an icon library to show a live chat -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <!-- JS function to toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon. -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <!-- logo container -->
+        <div id="logo">
+            <div><a href="index.html">
+                    <img class=logoImg src="images/AI-LOGO.png" alt="website logo">
+
+                </a>
+            </div>
+
+        </div>
+
+        <!--  navbar container -->
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" >Home</a>
+            <a href="membership.html">Membership</a>
+            <a href="events.html" class="active">Events</a>
+            <a href="validation.html">Validation</a>
+            <a href="style.html">Style</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="cart.html">Cart</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+         <!--  hero container -->
+        <section class="mainImage">
+            <h1>EVENTS</h1>
+        </section>
+       <!--  gifts  container -->
+        <article class="plan2">
+
+            <h3>PAST EVENTS</h3>
+            <p class="textblock">
+                Below is a table of our past events, for more information contact us at admin@astronomy.ie.  
+Are you posting on social media about your events?  Include our hashtag! 
+            </p>
+            <div class="event-table">
+               <table class="textblock">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                       <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>New Eyes on the Universe</td>
+                        <td>Wednesday 9th January 2022</td>
+                       <td>Leicester University</td>
+                    </tr>
+                    <tr>
+                        <td>Comet Watch</td>
+                        <td>Wednesday 25th February 2022</td>
+                       <td>Astronomy Ireland HQ</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Telescope Workshop</td>
+                        <td>Tuesday 31st September 2022</td>
+                       <td>Astronomy Ireland HQ</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>The Edge of the Solar System</td>
+                        <td>Monday 13th November 2022</td>
+                       <td>Technological University Sligo</td>
+                        
+                    </tr>
+                </tbody>
+            </table> 
+                
+            </div>
+            
+           
+        </article>
+        <article class="plan3">
+
+            <h3>UPCOMING EVENTS</h3>
+            <p class="textblock">
+                Astronomy Ireland hosts multiple events throughout the year, to find out more information on what is on offer from us
+                 check out our social media!
+            </p>
+            <div class="event-table">
+            <table class="textblock">
+                <thead>
+                     <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                       <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Near-Earth Asteroids </td>
+                        <td>Tuesday 13th December 2022</td>
+                       <td>Astronomy Ireland HQ</td>
+                    </tr>
+                    <tr>
+                        <td>The Star of Bethlehem</td>
+                        <td>Monday 12th December 2022</td>
+                       <td>University of Liverpool</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>The Science of Star Wars</td>
+                        <td>Monday 14th November 2023</td>
+                       <td>Glasgow University</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>SETI and Adaptive Optics</td>
+                        <td>Monday 8th August 2023</td>
+                       <td>National University of Ireland Galway</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+             </div>
+        </article>
+
+        
+        <!--  shopping section footer container -->
+        <footer class="shop">
+            <p>Our Shop is open!</p>
+            <button class="offersButton" type="button">Browse Items</button>
+
+        </footer>
+
+        <!--  about-blog-faq section footer container -->
+        <footer class="contact">
+            <p id="about">About us</p>
+            <p id="blog">Blog </p>
+            <p id="faq">FAQ </p>
+        </footer>
+
+        <!--  chat section footer container -->
+        <footer class="livechat">
+            <p>We are available for Live Chat!</p>
+            <!-- Add font awesome icon -->
+            <i class='far fa-comments' style='font-size:24px'></i>
+        </footer>
+
+        <!--  copyright section footer container -->
+        <footer class="copyright">
+            <p>© 2022 Astronomy Ireland</p>
+        </footer>
+
+        <!--  email section footer container -->
+        <footer class="search">
+            <p>Contact us: admin@astronomy.ie</p>
+        </footer>
+
+        <!--  social media section footer container -->
+        <footer class="media">
+            <!-- font awsome link -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </footer>
+    </div>
+</body>
+
+</html>

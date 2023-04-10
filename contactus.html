@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astronomy Ireland Contact Page</title>
+    <!-- Google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google fonts link for Exo san serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/contactus.css">
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+
+    <!-- meta tag for browser control of page's dimensions and scaling. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Load an icon library to show a live chat -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <!-- JS function to toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon. -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+    </script>
+
+    <!--  insert js here for form validation -->
+    <script>
+        function validate() {
+
+            let name_val = document.getElementById("name").value;
+
+            if (name_val == null || name_val == "") {
+                alert("Please enter your name");
+                return false;
+            }
+
+            let address_val = document.getElementById("address").value;
+
+            if (address_val == null || address_val == "") {
+                alert("Please enter your address");
+                return false;
+            }
+            
+            let message_val = document.getElementById("message").value;
+
+            if (message_val == null || message_val == "") {
+                alert("Please enter your message");
+                return false;
+            }
+
+            let phone_val = document.getElementById("phone").value;
+            if (phone_val == null || phone_val == "" || phone_val < 1) {
+                alert("Please enter your phone number");
+                return false;
+            }
+
+
+            let email_val = document.getElementById("email").value;
+            if (email_val == null || email_val == "") {
+                alert("Please enter your email");
+                return false;
+            }
+
+            let emailretype_val = document.getElementById("emailretype").value;
+            if (emailretype_val == null || emailretype_val == "") {
+                alert("Please retype your email");
+                return false;
+            }
+
+
+            let result = isNumeric(phone_val);
+
+            if (result == false) {
+                alert("Please enter a numeric value");
+                return false;
+            }
+
+
+
+            validateEmail(email_val);
+
+            let email_val2 = document.getElementById("email").value;
+            let emailretype2_val = document.getElementById("emailretype").value;
+            if (email_val2 != emailretype2_val) {
+                alert("Retyped email incorrect!");
+                return false;
+            }
+
+
+            return true;
+
+        }
+
+        function isNumeric(phone_val) {
+            const numberPattern = /^[0-9]+$/;
+            return numberPattern.test(phone_val);
+        }
+
+
+
+        function validateEmail(email_val) {
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (emailPattern.test(email_val) == false) {
+                alert("Email incorrect format");
+                return false;
+            } else return true;
+        }
+
+    </script> <!--  end form validation script -->
+
+    <!--  set cookie for name -->
+    <script>
+        function setCookie() {
+            let name = document.getElementById("name").value;
+            document.cookie = "name=" + name;
+            alert(document.cookie);
+            return true;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <!-- logo container -->
+        <div id="logo">
+            <div><a href="index.html">
+                    <img class=logoImg src="images/AI-LOGO.png" alt="website logo">
+
+                </a>
+            </div>
+
+        </div>
+
+        <!--  navbar container -->
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" >Home</a>
+            <a href="membership.html">Membership</a>
+            <a href="events.html">Events</a>
+            <a href="validation.html">Validation</a>
+            <a href="style.html">Style</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html" class="active">Contact Us</a>
+            <a href="cart.html">Cart</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <!--  hero container -->
+        <section class="mainImage">
+            <h1>CONTACT US</h1>
+        </section>
+        <!--  gifts  container -->
+        <article class="plan2">
+
+            <h3>CONTACT FORM</h3>
+            <p class="textblock">
+                Contact us using the form below for all queries. Membership to Astronomy Ireland includes
+                reduced rate tickets to any of our ticketed events
+                and free advice when buying a telescope.
+            </p>
+
+
+            <!--  contact form -->
+
+            <fieldset>
+                <legend> Send us a message </legend>
+                <form id="details_form" action="confirm.php" method="get">
+                    <p class="textblock">
+                        <label for="name">Name:</label>
+                        <input name="name" type="text" id="name" onMouseOver="">
+                    </p>
+                    <p class="textblock">
+                        <label for="address">Address:</label>
+                        <input type="text" name="address" id="address">
+                    </p>
+                    <p class="textblock">
+                        <label for="phone">Phone:</label>
+                        <input type="text" name="phone" id="phone">
+                    </p>
+
+                    <p class="textblock">
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" id="email">
+                    </p>
+                    <p class="textblock">
+                        <label for="emailretype">Retype Email:</label>
+                        <input type="text" name="emailretype" id="emailretype">
+                    </p>
+                    <p class="textblock">
+                        <label for="message">Message:</label>
+                       <textarea name="message" form="details_form" id="message"></textarea>
+                    </p>
+
+                    
+                    <p id="submitbutton">
+                        <input class="formButton" type="submit" name="submit" id="submit" value="Submit">
+                    </p>
+                    
+                    
+                    
+                </form>
+            </fieldset>
+        </article>
+
+        <article class="plan3">
+
+            <h3>OUR LOCATION</h3>
+
+            <!--  google map location -->
+            <p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.7875364385995!2d-6.34835276686762!3d53.40074041434337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485b5e9f236f76b3%3A0x4eb929a7f6c8dcc4!2sAstronomy%20Ireland%20Headquarters!5e0!3m2!1sen!2sie!4v1672597713088!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p>
+            <p class="textblock">
+                <strong>Location:</strong>
+                Unit B1
+                Centrepoint, Rosemount Business Park,
+                Ballycoolin,
+                Dublin D11RR62.
+                IE6413749Q.
+            </p>
+            <p class="search">
+                <strong>Email:</strong>
+                admin@astronomy.ie
+            </p>
+            <p class="textblock">
+                <strong>Phone:</strong>
+                +353 86 06 46 555
+            </p>
+        </article>
+
+
+        <!--  shopping section footer container -->
+        <footer class="shop">
+            <p>Our Shop is open!</p>
+            <button class="offersButton" type="button">Browse Items</button>
+
+        </footer>
+
+        <!--  about-blog-faq section footer container -->
+        <footer class="contact">
+            <p id="about">About us</p>
+            <p id="blog">Blog </p>
+            <p id="faq">FAQ </p>
+        </footer>
+
+        <!--  chat section footer container -->
+        <footer class="livechat">
+            <p>We are available for Live Chat!</p>
+            <!-- Add font awesome icon -->
+            <i class='far fa-comments' style='font-size:24px'></i>
+        </footer>
+
+        <!--  copyright section footer container -->
+        <footer class="copyright">
+            <p>© 2022 Astronomy Ireland</p>
+        </footer>
+
+        <!--  email section footer container -->
+        <footer class="search">
+            <p>Contact us: admin@astronomy.ie</p>
+        </footer>
+
+        <!--  social media section footer container -->
+        <footer class="media">
+            <!-- font awsome link -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </footer>
+    </div>
+
+    <!--  insert js here for form -->
+    <script>
+        document.getElementById("details_form").addEventListener("submit", validate);
+
+    </script>
+</body>
+
+</html>

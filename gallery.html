@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astronomy Ireland Gallery</title>
+    <!-- Google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google fonts link for Exo san serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/gallery.css">
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+
+    <!-- meta tag for browser control of page's dimensions and scaling. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Load an icon library to show a live chat -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <!-- JS function to toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon. -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <!-- logo container -->
+        <div id="logo">
+            <div><a href="index.html">
+                    <img class=logoImg src="images/AI-LOGO.png" alt="website logo">
+
+                </a>
+            </div>
+
+        </div>
+
+        <!--  navbar container -->
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" >Home</a>
+            <a href="membership.html">Membership</a>
+            <a href="events.html">Events</a>
+            <a href="validation.html">Validation</a>
+            <a href="style.html">Style</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="cart.html">Cart</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <!--  hero container -->
+        <section class="mainImage">
+            <h1>GALLERY</h1>
+        </section>
+        <!--  gifts  container -->
+        <article class="plan1">
+
+            <h3>SUBSCRIBE</h3>
+            <p class="textblock">
+                Be first to hear about exclusive releases
+                new products, expert tech tips, promotions and inspiration for your next adventure.
+
+                Receive free emails straight to your inbox each week.
+            </p>
+            <img src="images/newScreen1.png" alt="image of magazine Jan 2023"><br>
+
+            <ul class="gallery-list">
+                <li>Latest Events</li>
+                <li>Equipment Advice</li>
+                <li>Freebies</li>
+            </ul>
+
+            <p class="search">Subscribe at: admin@astronomy.ie</p>
+
+        </article>
+        <article class="plan2">
+
+            <h3>GALLERY</h3>
+            <p class="textblock">
+                Beginners' books and guides can be a great introduction to astronomy, but nothing beats experience. The more you stargaze, the more you’ll learn. Here are some wonderful observations sent to us by fans of the site.
+            </p>
+
+            <p>
+                <img src="images/pic1.jpg" alt="image of sky" width="593" height="445" id="sky">
+            </p>
+            <p class="slideshow">
+                <a href="#" id="prevLink">Previous |</a>
+                <a href="#" id="nextLink">Next</a>
+            </p>
+            <p class="textblock">
+                Move the cursor over the images/picture you wish to preview
+            </p>
+            <p class="slideshow">
+
+                <a href="#" id="1"><img src="images/thumbnails/pic1-sm.jpg" alt="Pictures of the sky"></a>
+                <a href="#" id="2"><img src="images/thumbnails/pic2-sm.jpg" alt="Pictures of the sky"></a>
+                <a href="#" id="3"><img src="images/thumbnails/pic3-sm.jpg" alt="Pictures of the sky"></a>
+                <a href="#" id="4"><img src="images/thumbnails/pic4-sm.jpg" alt="Pictures of the sky"></a>
+
+            </p>
+
+
+            <script>
+                var currentImg = 1;
+
+                document.getElementById("1").addEventListener("mouseover", loadImage);
+                document.getElementById("2").addEventListener("mouseover", loadImage);
+                document.getElementById("3").addEventListener("mouseover", loadImage);
+                document.getElementById("4").addEventListener("mouseover", loadImage);
+
+                document.getElementById("prevLink").addEventListener("click", prevLink);
+                document.getElementById("nextLink").addEventListener("click", nextLink);
+
+                function loadImage()
+
+                {
+                    imgNum = this.id;
+                    document.getElementById("sky").src =
+                        "images/pic" + imgNum + ".jpg";
+                    currentImg = imgNum;
+                }
+
+
+                function nextLink() {
+                    if (currentImg == 4) {
+                        document.getElementById("sky").src =
+                            "images/pic1.jpg";
+                        currentImg = 1;
+                    } else {
+                        currentImg++;
+                        document.getElementById("sky").src =
+                            "images/pic" + currentImg + ".jpg";
+                    }
+
+                }
+
+                function prevLink() {
+                    if (currentImg == 1) {
+                        document.getElementById("sky").src =
+                            "images/pic4.jpg";
+                        currentImg = 4;
+                    } else {
+                        currentImg--;
+                        document.getElementById("sky").src =
+                            "images/pic" + currentImg + ".jpg";
+                    }
+                }
+
+            </script>
+
+
+
+        </article>
+
+        <article class="plan3">
+
+            <h3>THE SKY AT NIGHT</h3>
+            <p class="textblock">
+                If you're new to astronomy, you might be wondering where to start. It can be daunting stepping out under the night sky for the first time with the intention of learning your way around the stars and constellations, looking out for planets and trying to get to know all about the phases of the Moon.Most beginners presume that the best time to observe the Moon is when it’s high in the night sky, but at that point it’s way too bright.
+                Instead, find out the exact time of moonrise on the night of the full Moon and watch our satellite appear on the horizon during dusk.
+
+            </p>
+
+            <ul class="gallery-list">
+                <li>Moon Phases</li>
+                <li>Planets</li>
+                <li>Satellites</li>
+            </ul>
+
+            <p class="search">Read more, visit our Blog!</p>
+
+        </article>
+
+
+        <!--  shopping section footer container -->
+        <footer class="shop">
+            <p>Our Shop is open!</p>
+            <button class="offersButton" type="button">Browse Items</button>
+
+        </footer>
+
+        <!--  about-blog-faq section footer container -->
+        <footer class="contact">
+            <p id="about">About us</p>
+            <p id="blog">Blog </p>
+            <p id="faq">FAQ </p>
+        </footer>
+
+        <!--  chat section footer container -->
+        <footer class="livechat">
+            <p>We are available for Live Chat!</p>
+            <!-- Add font awesome icon -->
+            <i class='far fa-comments' style='font-size:24px'></i>
+        </footer>
+
+        <!--  copyright section footer container -->
+        <footer class="copyright">
+            <p>© 2022 Astronomy Ireland</p>
+        </footer>
+
+        <!--  email section footer container -->
+        <footer class="search">
+            <p>Contact us: admin@astronomy.ie</p>
+        </footer>
+
+        <!--  social media section footer container -->
+        <footer class="media">
+            <!-- font awsome link -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </footer>
+    </div>
+</body>
+
+</html>

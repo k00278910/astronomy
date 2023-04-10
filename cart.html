@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astronomy Ireland Cart</title>
+    <!-- Google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google fonts link for Exo san serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/cart.css">
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+
+    <!-- meta tag for browser control of page's dimensions and scaling. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Load an icon library to show a live chat -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <!-- JS function to toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon. -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <!-- logo container -->
+        <div id="logo">
+            <div><a href="index.html">
+                    <img class=logoImg src="images/AI-LOGO.png" alt="website logo">
+
+                </a>
+            </div>
+
+        </div>
+
+        <!--  navbar container -->
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" >Home</a>
+            <a href="membership.html">Membership</a>
+            <a href="events.html">Events</a>
+            <a href="validation.html">Validation</a>
+            <a href="style.html">Style</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="cart.html" class="active">Cart</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <!--  hero container -->
+        <section class="mainImage">
+            <h1>CART</h1>
+        </section>
+        <!--  gifts  container -->
+        <article class="plan1">
+
+            <h3>SUBSCRIBE</h3>
+            <p class="textblock">
+                Be first to hear about exclusive releases
+                New products, expert tech tips, promotions and inspiration for your next adventure.
+
+                Receive free emails straight to your inbox each week.
+            </p>
+            <img src="images/newScreen2.png" alt="image of magazine Aug 2022">
+
+
+        </article>
+        <article class="plan2">
+
+            <h3>YOUR CART</h3>
+
+            <p class="textblock">
+                Welcome! Are you new to astronomy or looking for your first telescope? We created the Tools for Beginners resource center to help you get started. We invite you to get out under the stars soon and discover this rewarding hobby for yourself.
+
+            </p>
+            <p class="textblock">
+                Your cart is currently empty
+            </p>
+            <button class="offersButton" type="button">Return to Shop</button>
+
+            <p class="textblock">
+                <strong class="search">Recommended products</strong>
+            </p>
+            
+            <div class="recommended_products">
+                <img class="search" src="images/thumbnails/PRODUCT1.jpg" alt="Picture of camera">
+                <img class="search" src="images/thumbnails/PRODUCT2.jpg" alt="Picture of camera">
+                <img class="search" src="images/thumbnails/PRODUCT3.jpg" alt="Picture of tripod">
+                <img class="search" src="images/thumbnails/PRODUCT4.jpg" alt="Picture of tripod">
+            </div>
+            
+            
+        </article>
+        <article class="plan3">
+
+            <h3>CUSTOMER INFORMATION</h3>
+            <p class="textblock">
+                We aim to make things as simple as possible for you - if you change your mind or find an item just isn’t right for you, you have a full 365 days to return your goods, subject to the conditions outlined in our Returns Policy below.
+            </p>
+
+            <ul class="cart-list">
+                <li class="customer_info">Return Policy</li>
+                <li class="customer_info">Track my Order</li>
+                <li class="customer_info">FAQ</li>
+                <li class="customer_info">Buying guides</li>
+                <li class="customer_info">Delivery costs</li>
+                <li class="customer_info">Discount Codes</li>
+            </ul><br>
+
+
+        </article>
+
+
+        <!--  shopping section footer container -->
+        <footer class="shop">
+            <p>Our Shop is open!</p>
+            <button class="offersButton" type="button">Browse Items</button>
+
+        </footer>
+
+        <!--  about-blog-faq section footer container -->
+        <footer class="contact">
+            <p id="about">About us</p>
+            <p id="blog">Blog </p>
+            <p id="faq">FAQ </p>
+        </footer>
+
+        <!--  chat section footer container -->
+        <footer class="livechat">
+            <p>We are available for Live Chat!</p>
+            <!-- Add font awesome icon -->
+            <i class='far fa-comments' style='font-size:24px'></i>
+        </footer>
+
+        <!--  copyright section footer container -->
+        <footer class="copyright">
+            <p>© 2022 Astronomy Ireland</p>
+        </footer>
+
+        <!--  email section footer container -->
+        <footer class="search">
+            <p>Contact us: admin@astronomy.ie</p>
+        </footer>
+
+        <!--  social media section footer container -->
+        <footer class="media">
+            <!-- font awsome link -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </footer>
+    </div>
+</body>
+
+</html>
